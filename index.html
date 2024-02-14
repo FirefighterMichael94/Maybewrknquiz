@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question-container">
+            <h2 id="question-text"></h2>
+            <div id="image-container"></div>
+        </div>
+        <div id="options-container"></div>
+        <div id="result-container">
+            <h2>Your Final Score: <span id="final-score"></span></h2>
+            <input type="text" id="initials-input" placeholder="Enter your initials">
+            <button onclick="saveScore()">Save Score</button>
+            <ul id="high-scores-list"></ul>
+        </div>
+        <div id="timer-container">
+            <p>Time Left: <span id="timer-display"></span> seconds</p>
+        </div>
+        <div id="score-container">
+            <p>Score: <span id="score"></span></p>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

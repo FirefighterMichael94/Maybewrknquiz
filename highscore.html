@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+</head>
+<body>
+    <h1>High Scores</h1>
+    <ul id="high-scores-list"></ul>
+
+    <script>
+        // Retrieve and display high scores from local storage
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        const highScoresList = document.getElementById('high-scores-list');
+        highScores.forEach(entry => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${entry.initials}: ${entry.score}`;
+            highScoresList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
